@@ -1,0 +1,83 @@
+[type=submit], .btn, button {
+    background: darken(@lp-light-grey, 15%);
+    cursor: pointer;
+    display:inline-block;
+    font-family:inherit;
+    font-size: 0.9em;
+    line-height:1.8em;
+    font-weight:400;
+    width: 100px;
+    margin:0 0 @marginS;
+    padding:.25em 1.125em;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #fff;
+    border: none;
+    color: rgb(48,48,48);
+    position: relative;
+    min-height: 30px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+
+    &:hover {
+        background: darken(@lp-light-grey, 10%);
+    }
+    &:active, &.act {
+
+    }
+
+    &:disabled, &[disabled=disabled], &.disabled,
+    &:disabled:hover, &[disabled=disabled]:hover, &.disabled:hover,
+    &:disabled:active, &[disabled=disabled]:active, &.disabled:active {
+        color: darken(@lp-light-grey, 30%);
+        -webkit-box-shadow:none;
+        box-shadow:none;
+        background: @lp-light-grey;
+    }
+
+    &.block{
+        display: block;
+    }
+
+    span:nth-child(1){
+        max-width: 100px;
+        height: auto;
+    }
+
+    span.btn-label {
+        margin-left: 12px;
+    }
+}
+
+// IE 8
+button[disabled] {
+    color: darken(@lp-light-grey, 30%);
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    background: @lp-light-grey;
+}
+
+.btn-primary, .btn-danger {
+    text-transform:uppercase;
+    color: white;
+    text-shadow: none;
+    font-weight: normal;
+}
+
+.btn-primary {
+    background: @toj-orange;
+    &:hover {
+        background: darken(@toj-orange, 10%);
+        -webkit-box-shadow:0 1px 2px darken(@lp-light-grey, 20%);
+        box-shadow:0 1px 2px darken(@lp-light-grey, 20%);
+    }
+}
+
+.btn-danger {
+    background: @toj-danger;
+    &:hover {
+        background: darken(@toj-danger, 10%);
+        -webkit-box-shadow:0 1px 2px darken(@lp-light-grey, 20%);
+        box-shadow:0 1px 2px darken(@lp-light-grey, 20%);
+    }
+}

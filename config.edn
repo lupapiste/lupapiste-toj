@@ -1,0 +1,11 @@
+{:http {:mode :dev
+        :port 8010
+        :session-key-path "sessionkey"
+        :lupapiste-host "http://localhost:8000"
+        :autologin-check-url "http://localhost:8000/internal/autologin/user"
+        :lupapiste-api-key "tojTOJtojTOJtojTOJtoj"
+        :thread 50}
+ :db {:uri "mongodb://localhost/toj"}
+ :logging {:level :info
+           ;; Remove :file to log JSON to stdout
+           :file "toj.log"}}

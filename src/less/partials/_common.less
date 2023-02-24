@@ -1,0 +1,60 @@
+html {
+    background:#fff;
+    -webkit-font-smoothing: antialiased;
+    /* Inflate text size on mobiles by full increments only */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: @font-body;
+    font-size: @font-size-body;
+    line-height: @baseline;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.main-app {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: @application-max-width;
+    margin: 0 auto;
+    padding: 175px 20px 0 20px;
+    &:extend(.cf);
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.loading {
+    font-size: 48px;
+    color: @toj-orange;
+    text-align: center;
+}

@@ -1,0 +1,80 @@
+.tree-container {
+    float: left;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    padding-right: 30px;
+    font-size: 16px;
+    height: 100%;
+    overflow: auto;
+}
+
+.node {
+    .children {
+        display: block;
+        padding-left: 10px;
+        position: relative;
+    }
+    .tree-expand {
+        cursor: pointer;
+        &:hover {
+            border-radius: 12px;
+            background-color: @toj-light-grey;
+        }
+    }
+}
+
+.leaf {
+    position: relative;
+    padding-left: 42px;
+    left: -20px;
+    height: @baseline;
+    overflow: hidden;
+    .arrow-right {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        background-color: #ffffff;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid @toj-orange;
+    }
+    &.active {
+        background-color: @toj-orange;
+        .leaf-text:hover {
+            text-decoration: none;
+        }
+        .arrow-right {
+            display: block;
+        }
+    }
+    .icon-plus:hover {
+        border-radius: 12px;
+        background-color: @toj-light-grey;
+    }
+    &.with-children {
+        padding-left: 20px;
+    }
+}
+
+.leaf-text {
+    position: relative;
+    display: inline-block;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    span i {
+        font-size: 12px;
+    }
+}
+
+.editing .leaf-text:hover {
+    text-decoration: none;
+    cursor: not-allowed;
+}

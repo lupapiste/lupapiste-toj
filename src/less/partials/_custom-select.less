@@ -1,0 +1,36 @@
+.custom-select {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #ffffff;
+    padding: 3px 0 3px 10px;
+    min-width: 200px;
+    text-align: right;
+    float: left;
+    margin: -4px 0 0 3px;
+
+    span {
+        float: none;
+    }
+
+    .options {
+        position: absolute;
+        top: 32px;
+        left: -1px;
+        background-color: rgba(255,255,255,0.9);
+        color: #000000;
+        border: 1px solid #000000;
+        box-sizing: content-box;
+        width: 100%;
+        .option {
+            padding: 5px;
+            border-bottom: 1px solid #000000;
+            cursor: pointer;
+            word-break: break-all;
+            overflow: hidden;
+            &:hover {
+                background-color: @toj-orange;
+                color: #000000;
+            }
+        }
+    }
+}
