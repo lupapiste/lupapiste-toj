@@ -1,0 +1,75 @@
+.publisher {
+    position: absolute;
+    top: 60px;
+    z-index: 50;
+    background-color: @lp-light-grey;
+    padding: 5px 0 6px 0;
+    width: 100%;
+    min-height: 62px;
+    .publisher-wrapper {
+        width: 100%;
+        max-width: @application-max-width;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex: auto;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .left, .right {
+        display: flex;
+    }
+    .right {
+        flex-direction: column;
+        div {
+            margin-top: -6px;
+        }
+        span, input {
+            margin-right: 5px;
+        }
+        .save-controls {
+            display: flex;
+            align-items: flex-end;
+            flex: auto;
+            flex-wrap: wrap;
+            button {
+                height: 30px;
+                line-height: 30px;
+                min-height: unset;
+            }
+        }
+    }
+    .left {
+        flex-wrap: wrap;
+        align-items: flex-end;
+        select {
+            min-width: 200px;
+        }
+        .single-organization {
+            height: 28px;
+            line-height: 28px;
+            padding-bottom: 2px;
+        }
+        > div {
+            margin-right: 10px;
+        }
+    }
+    .download-button {
+        margin-bottom: 2px;
+        a {
+            color: #000000;
+            text-decoration: none;
+            span {
+                margin-left: 5px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    h3 {
+        margin: 0 0 5px;
+        font-size: 14px;
+    }
+}

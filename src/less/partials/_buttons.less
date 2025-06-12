@@ -1,0 +1,51 @@
+[type=submit], .btn, button {
+    min-height: 40px;
+    max-height: 40px;
+    line-height: 40px;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: left;
+    text-decoration: none;
+    padding: 0 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    i, span {
+        vertical-align: middle;
+    }
+    :first-child {
+        padding-right: 10px;
+    }
+    &.wide-icon-only span {
+        @media (max-width: 1190px) {
+            display: none;
+        }
+    }
+}
+
+.btn-primary, .btn-danger {
+    color: white;
+    text-shadow: none;
+    font-weight: normal;
+}
+
+.btn-primary {
+    background: @toj-violet;
+    &:hover {
+        background: darken(@toj-violet, 10%);
+        -webkit-box-shadow:0 1px 2px darken(@lp-light-grey, 20%);
+        box-shadow:0 1px 2px darken(@lp-light-grey, 20%);
+    }
+}
+
+.btn-danger {
+    background: @toj-danger;
+    &:hover {
+        background: darken(@toj-danger, 10%);
+        -webkit-box-shadow:0 1px 2px darken(@lp-light-grey, 20%);
+        box-shadow:0 1px 2px darken(@lp-light-grey, 20%);
+    }
+}

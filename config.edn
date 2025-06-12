@@ -1,0 +1,20 @@
+{:http    {:mode                :dev
+           :port                8010
+           :session-key-path    "sessionkey"
+           :lupapiste-host      "http://localhost:8000"
+           :autologin-check-url "http://localhost:8000/internal/autologin/user"
+           :lupapiste-api-key   "tojTOJtojTOJtojTOJtoj"
+           :thread              50
+           :cookie-attrs        {:http-only true
+                                 :secure    true
+                                 :same-site :strict}
+           :cookie-name         "lupapistunto"
+           :csp                 {:default-src "'self' localhost:* ws://localhost:*"
+                                 :script-src  "'self' 'unsafe-inline'"
+                                 :font-src    "'self' https://fonts.gstatic.com"
+                                 :style-src   "'self' 'unsafe-inline' fonts.googleapis.com"
+                                 :img-src     "'self' data: localhost:* *.lupapiste.fi"}}
+ :db      {:uri "mongodb://localhost/toj"}
+ :logging {:level :info
+           ;; Remove :file to log JSON to stdout
+           :file  "toj.log"}}

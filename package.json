@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "less-build": "lessc src/less/main.less resources/public/css/main.css",
+    "less-watch": "chokidar \"src/less/**/*.less\" -c \"npm run less-build\"",
+    "test-cljs": "karma start --single-run",
+    "test-cljs:ci": "karma start karma.ci.conf.js --single-run"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "karma": "^6.4.2",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-cljs-test": "^0.1.0",
+    "karma-junit-reporter": "^2.0.1",
+    "less": "^4.2.0",
+    "puppeteer": "^23.7.0"
+  }
+}
